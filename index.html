@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>	
+		<meta name="keywords" content="" />
+		<link rel="canonical" href=""/>
+		<link alternate="" href="" hreflang=""/>
+		<meta name="robots" content=""/>
+		<title>JS</title>
+	</head>
+	<body>
+		<main>
+			<figure id="pic">
+				<img src="3.jpg" alt="">
+				<figcaption>Ram TIka</figcaption>
+			</figure>
+			<button  id="btn">Hide</button>
+		</main>
+
+		<script>
+			var button=document.getElementById("btn");
+			button.onclick=function main(){
+				var picture=document.getElementById("pic");
+				var btn_text=button.innerHTML;
+				
+				if(btn_text == "Show"){picture.style.display="block"; button.innerHTML="Hide";}
+				if(btn_text == "Hide"){picture.style.display="none"; button.innerHTML="Show";}
+
+			}
+			
+		</script>
+
+	</body>
+</html>
