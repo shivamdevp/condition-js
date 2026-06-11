@@ -7,29 +7,357 @@
 		<link rel="canonical" href=""/>
 		<link alternate="" href="" hreflang=""/>
 		<meta name="robots" content=""/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 		<title>JS</title>
 	</head>
 	<body>
-		<main>
+
+		
+		<h2 id="text"> SHIVAM KUMAR</h2>
+		<button id="first_btn">ZOOMIN</button>
+		<button id="second_btn">ZOOMOUT</button>
+		<button id="three_btn">RESET</button>
+		<script>
+			var txt=document.getElementById("text");
+			txt.style.fontSize="16px";
+			var first_btn = document.getElementById("first_btn");
+			var second_btn = document.getElementById("second_btn");
+			var three_btn = document.getElementById("three_btn");
+			first_btn.onclick=function(){
+				txt.style.fontSize="40px";
+				first_btn.onclick=function(){
+					txt.style.fontSize="60px";
+					first_btn.onclick=function(){
+						txt.style.fontSize="80px";
+						first_btn.onclick=function(){
+							txt.style.fontSize="100px";
+						}
+					}
+				}
+				
+				
+			}
+			second_btn.onclick=function(){
+				txt.style.fontSize="16px";
+				second_btn.onclick=function(){
+					txt.style.fontSize="40px";
+					second_btn.onclick=function(){
+					txt.style.fontSize="60px";
+					second_btn.onclick=function(){
+					txt.style.fontSize="80px";
+				}
+				}
+				
+				}
+				
+			}
+			three_btn.onclick=function(){
+				txt.style.fontSize="16px";
+			}	
+		</script>
+
+<hr/><br/>
+
+
+		
 			<figure id="pic">
 				<img src="3.jpg" alt="">
 				<figcaption>Ram TIka</figcaption>
 			</figure>
-			<button  id="btn">Hide</button>
-		</main>
+			<button  id="btn_hide" style="padding: 10px 20px; margin-left: 20vw;">hide</button>
 
 		<script>
-			var button=document.getElementById("btn");
-			button.onclick=function main(){
+			var button_hide=document.getElementById("btn_hide");
+			button_hide.onclick=function(){
 				var picture=document.getElementById("pic");
-				var btn_text=button.innerHTML;
+				var btn_text=button_hide.innerHTML;
 				
-				if(btn_text == "Show"){picture.style.display="block"; button.innerHTML="Hide";}
-				if(btn_text == "Hide"){picture.style.display="none"; button.innerHTML="Show";}
+				if(btn_text == "show"){picture.style.display="block"; button_hide.innerHTML="hide";}
+				if(btn_text == "hide"){picture.style.display="none"; button_hide.innerHTML="show";}
 
 			}
 			
 		</script>
 
+		<hr/><br/>
+
+		<h1>Even and Odd Number Checker Tool</h1>
+		<form action="">
+			<input type="number" name="number" id="num" />
+			<input type="button" name="button" value="Output" id="btn-1" />
+		</form>
+		<script>
+			var button = document.getElementById("btn-1");
+			button.onclick = function(){
+				var input=document.getElementById("num").value;
+				if(input%2==0){window.alert("even number");}else{window.alert("odd number");}
+			}
+		</script>
+
+		<hr/><br/>
+<main>
+	<section>
+		<h2 style="text-align: center; font-size: 50px;">FORM Validation</h2>
+		<form id="frm" action="" style="margin: 0 auto; padding: 5px 10px; box-shadow: 0px 5px 10px grey; width: 40%; font-family: sans-serif; border-radius: 10px; position:relative; height: 311px; ">
+			<h3 style="font-size: 20px; margin-bottom: 0px;">Sign Up</h3>
+			<p style="font-size: 15px; margin-top: 5px;color: rgba(0,0,0,0.6);">It's quick and easy.</p>
+			<hr>
+			<input type="text" required name="firstname" placeholder="Firstname" id="f_name" style="outline: none;  font-size: 15px;border: 1px solid #ccc; width: 45%; padding: 10px;margin-bottom: 10px; background-color: #f5f6f7; border: none;">
+			<img src="warning.png" alt="" id="f_img" style="width: 25px; position:absolute;left: 44%; top: 31%; display: none;">
+			<img src="small0.jpg" alt="" id="img_what" style="width: 20%; position: absolute; top: 30%; left: -22%; display: none; border-radius: 10px;box-shadow: 0px 0px 5px red;" >
+
+			<input type="text" required name="surname" placeholder="Surname" id="s_name" style="outline: none;  font-size: 15px;border: 1px solid #ccc; width: 45%; padding: 10px;margin-bottom: 10px; background-color: #f5f6f7; border: none;">
+			<img src="warning.png" alt="" id="f_img_1" style="width: 25px; position:absolute;right: 4%; top: 31%; display:none;">
+			<img src="small1.jpg" alt="" id="sur_name" style="width: 20%; position: absolute; top: 31%; right: -23%; display: none; border-radius: 10px;box-shadow: 0px 0px 5px red;" >
+
+			<input type="email" required name="email" placeholder="Email address" id="m_email"style="outline: none;  font-size: 15px;border: 1px solid #ccc; width: 95%; padding: 10px;margin-bottom: 10px; background-color: #f5f6f7; border: none;" >
+			<img src="warning.png" alt="" id="f_img_2" style="width: 25px; position:absolute;right: 3.5%; top: 45%; display:none;">
+			<img src="small2.jpg" alt="" id="m_what" style="width: 40%; position: absolute; top: 44%; left: -42%; display: none; border-radius: 10px;box-shadow: 0px 0px 5px red;" >
+
+			<input type="password" required name="password" placeholder="password" id="pass" style="outline: none;  font-size: 15px;border: 1px solid #ccc; width: 95%; padding: 10px;margin-bottom: 10px; background-color: #f5f6f7; border: none;">
+			<img src="warning.png" alt="" id="f_img_3" style="width: 25px; position:absolute;right: 3.5%; top: 60.5%; display:none;">
+			<!-- <img src="small3.jpg" alt="" id="pass_what" style="width: 35%; position: absolute; top: 67%; left: -37%; display: none; border-radius: 10px;box-shadow: 0px 0px 5px red;" > -->
+			<div id="paa_hint" style="border: 1px solid #000; width: 83%; height: 120px; padding: 10px; display: none; position:absolute; background-color: #ddd; border: none; border-radius: 5px; box-shadow: 0 5px 10px #ccc; cursor: pointer;"><i class="bi bi-key" style="padding-right: 10px;"></i><span>Use a Securely Generated Password</span><br/><br/><p id="pass_text_hint" style="padding-left: 50px;">Dr%123@#R^&*@56</span><hr/><p style="text-align: center;">View Saved Logins</p></div><br/>
+			
+			<input type="checkbox" name="checkbox" id="check" ><span id="s_text" style="color: grey;">Show Password</span>
+			<br/>
+			<input type="submit"  name="submit" value="submit" style="padding: 10px 25px; float: right; font-size: 14px; cursor: pointer;"  />
+		</form>
+	</section>
+</main>
+	<script>
+		var f_name = document.getElementById("f_name");
+		var s_name = document.getElementById("s_name");
+		var m_email =document.getElementById("m_email");
+		var pass = document.getElementById("pass");
+		f_name.onblur=function callback(){
+		var f_value = document.getElementById("f_name").value;
+		var f_img = document.getElementById("f_img");
+		if(f_value == ""){f_img.style.display="block"; f_name.style.border="1px solid red";}
+		var what_name = document.getElementById("img_what");
+		f_name.onclick=function(){what_name.style.display="block"; f_name.style.border="none"; f_img.style.display="none";
+		if(f_name.value !=""){
+			what_name.style.display="none"; f_name.style.border="none"; f_img.style.display="none";
+		}else{what_name.style.display="block"; f_name.style.border="1px solid red"; f_img.style.display="block";}
+			f_name.onblur=function(){what_name.style.display="none"; 
+			// f_name.style.border="1px solid red"; f_img.style.display="block";
+			callback();
+			
+		}
+		}
+		}
+		f_name.oninput=function(){
+				var what_name = document.getElementById("img_what");
+				what_name.style.display="none"; 
+				f_name.style.border="none"; f_img.style.display="none";
+			}
+
+		s_name.onblur=function callsiu(){
+		var f_value = document.getElementById("s_name").value;
+		var f_img_1 = document.getElementById("f_img_1");
+		if(f_value == ""){f_img_1.style.display="block"; s_name.style.border="1px solid red";}
+		var surname = document.getElementById("sur_name");
+		s_name.onclick=function(){surname.style.display="block";f_img_1.style.display="none"; s_name.style.border="none"; 
+		if(s_name.value !=""){
+			surname.style.display="none";f_img_1.style.display="none"; s_name.style.border="none";
+		}else{surname.style.display="block";f_img_1.style.display="block"; s_name.style.border="1px solid red";}
+			s_name.onblur=function(){surname.style.display="none";
+			 callsiu(); 
+		}
+		}
+		}
+		s_name.oninput=function(){
+				var surname = document.getElementById("sur_name");
+				surname.style.display="none";
+				f_img_1.style.display="none"; s_name.style.border="none"; 
+			 }
+
+		m_email.onblur=function backcal(){
+			var f_value = document.getElementById("m_email").value;
+		var f_img_2 = document.getElementById("f_img_2");
+		if(f_value == ""){f_img_2.style.display="block"; m_email.style.border="1px solid red";}
+		var emainumber = document.getElementById("m_what");
+		m_email.onclick=function(){emainumber.style.display="block";f_img_2.style.display="none"; m_email.style.border="none";
+		if(m_email.value !=""){emainumber.style.display="none";
+				f_img_2.style.display="none"; m_email.style.border="none";}else{emainumber.style.display="block";
+				f_img_2.style.display="block"; m_email.style.border="1px solid red";}
+			m_email.onblur=function(){ emainumber.style.display="none";backcal();
+		}
+		}
+		}
+		m_email.oninput=function(){
+				var emainumber = document.getElementById("m_what");
+				emainumber.style.display="none";
+				f_img_2.style.display="none"; m_email.style.border="none";
+			}
+			
+			
+		pass.onblur=function passback(){
+		var f_value = document.getElementById("pass").value;
+		var f_img_3 = document.getElementById("f_img_3");
+		if(f_value == ""){f_img_3.style.display="block"; pass.style.border="1px solid red";}
+		
+		/*
+		var passimg=document.getElementById("pass_what");
+			pass.onclick=function(){passimg.style.display="block";f_img_3.style.display="none"; pass.style.border="none";
+			pass.onblur=function(){passback(); passimg.style.display="none";
+
+		}
+		}
+		*/
+		}
+		// Password validation start
+		var pass_input= document.getElementById("pass");
+		pass_input.onclick=function(){
+			var box= document.getElementById("paa_hint");
+			box.style.display="block";
+			var passtext= document.getElementById("pass_text_hint");
+			if(pass_input.value !=""){
+				box.style.display="none";
+			}else{box.style.display="block";	
+			}
+			box.onclick=function(){
+				var new_pass =passtext.innerHTML;
+				pass_input.value = new_pass;
+				box.style.display="none";
+				f_img_3.style.display="none"; pass.style.border="none";
+			}
+		}
+		pass_input.oninput=function(){
+			var box= document.getElementById("paa_hint");
+			box.style.display="none";
+			if(pass_input.value !=""){
+				f_img_3.style.display="none"; pass.style.border="none";
+			}else{
+				f_img_3.style.display="block"; pass.style.border="1px solid red";
+			}
+		}
+		// Checkbox coding start
+		var showpass = document.getElementById("check");
+		var spantext = document.getElementById("s_text");
+		var passwordfield =document.getElementById("pass");
+		showpass.onclick=function(){
+			if(showpass.checked){
+				passwordfield.type="text";
+				spantext.innerHTML="Hide Password";
+			}else{
+				passwordfield.type="password";
+				spantext.innerHTML="Show Password";
+			}
+		}
+
+		// Form submit button coding start
+		var submiform = document.getElementById("frm");
+		submiform.onsubmit =function(){
+			if(f_name.value=="" || s_name.value=="" || m_email.value=="" || pass.value=="")
+		{
+			f_img.style.display="block"; f_name.style.border="1px solid red";
+			f_img_1.style.display="block"; s_name.style.border="1px solid red";
+			f_img_2.style.display="block"; m_email.style.border="1px solid red";
+			f_img_3.style.display="block"; pass.style.border="1px solid red";	
+		}else{
+			window.alert("Login sucessfully")
+		}
+		}
+		
+	</script>
+	<hr/><br/>
+	<h4 style="text-align: center;">Login Form Validation</h4>
+	<form id="frmlogin" action="" style="text-align: center;">
+		<label for="">User Name</label><br/>
+		<input type="text" id="user_name"/><span id="user_empty"></span><br/><br/>
+		<label for="">User Password</label><br/>
+		<input type="password" name="" id="user_pass"/><span id="pass_empty"></span><br/><br/>
+		<input type="submit" value="Login">
+	</form>
+	<script>
+		var formlogin = document.getElementById("frmlogin");
+		var username = document.getElementById("user_name");
+		var userempt = document.getElementById("user_empty");
+		var userpass = document.getElementById("user_pass");
+		var  passemty = document.getElementById("pass_empty");
+		formlogin.onsubmit=function(){
+			if(username.value=="" && userpass.value==""){
+				userempt.innerHTML="Empty Field";
+				passemty.innerHTML="Empty Field";
+				return false;
+			}
+			if(username.value ==""){
+				userempt.innerHTML="Empty Field";
+				return false;
+			}
+			if(userpass.value ==""){
+				passemty.innerHTML="Empty Field";
+				return false;
+			}
+			if(username.value=="amit" && userpass.value=="123"){
+				window.location="https://icons.getbootstrap.com/icons/key-fill/";
+				return false;
+			}
+			if(username.value!="amit" && userpass.value!="123"){
+				window.alert("wrong Details, Please try again");
+				return false;
+			}
+			if(userpass.value !="123"){
+				passemty.innerHTML="Wrong password";
+				return false;
+			}
+			if(username.value !="amit"){
+				userempt.innerHTML="user not found";
+				return false;
+			}
+				
+		}
+	</script>
+
+	<hr/><br/>
+
+	<h4>Vowel and consonent Checker</h4>
+	<form action="" id="vcfrm">
+		<input type="text" id="input_vw" /><br/><br/>
+		<input type="submit" value="check" />
+	</form>
+	<script>
+		var vowel=document.getElementById("vcfrm");
+		var inputvw = document.getElementById("input_vw");
+		vowel.onsubmit=function(){
+			if(inputvw.value=="a" ||inputvw.value=="e" || inputvw.value=="o" || inputvw.value=="i" ||inputvw.value=="u"){
+				window.alert("this is vowel");
+			}else{window.alert("this is consonent");}
+/*
+			switch(inputvw.value){
+				case 'a' : {window.alert("vowel")};break;
+				case 'e' : {window.alert("vowel")};break;
+				case 'o' : {window.alert("vowel")};break;
+				case 'i' : {window.alert("vowel")};break;
+				case 'u' : {window.alert("vowel")};break;
+				default : {window.alert("consonent")};
+			}
+				*/
+
+/*
+			if(inputvw.value=="a"){
+window.alert("this is vowel");
+			}else if(inputvw.value=="e" ){
+window.alert("this is vowel");
+			}else if(inputvw.value=="o" ){
+window.alert("this is vowel");
+			}
+			else if(inputvw.value=="i" ){
+window.alert("this is vowel");
+			}
+			else if(inputvw.value=="u" ){
+window.alert("this is vowel");
+			}
+			else{
+window.alert("this is consonent");
+			}
+*/
+		}
+
+
+
+	</script>
+<br/><br/><br/>
 	</body>
 </html>
